@@ -9,8 +9,9 @@
 /* Begin PBXBuildFile section */
 		1D3778D9EC38AA688A645BCF71D9FF48 /* Pods-YFZSwiftExtensions_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E244966F38DF08F7128498158F2129D6 /* Pods-YFZSwiftExtensions_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5196CA13A045BD989F7EEBAE83A8046D /* Pods-YFZSwiftExtensions_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D9AE8B71979E0E1031E778AC1DBE5CD1 /* Pods-YFZSwiftExtensions_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5422D96324A8BC8000DDA6E4 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5422D96224A8BC8000DDA6E4 /* UILabel.swift */; };
-		71415B26E7FC9144D6275D90A51AFE7F /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9AC79BBD0047C7B1210C7667D7547B /* ReplaceMe.swift */; };
+		5422D96324A8BC8000DDA6E4 /* UILabel+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5422D96224A8BC8000DDA6E4 /* UILabel+Extensions.swift */; };
+		5422D96A24A8C21D00DDA6E4 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5422D96924A8C21D00DDA6E4 /* UIView+Extensions.swift */; };
+		5422D96C24A8C25E00DDA6E4 /* Data+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5422D96B24A8C25E00DDA6E4 /* Data+Extensions.swift */; };
 		787C4AF41A19A2CB99D421D3CD451ABF /* Pods-YFZSwiftExtensions_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A66FB294312A37C9A30B8A5A68A0B68 /* Pods-YFZSwiftExtensions_Tests-dummy.m */; };
 		7E76FD5D2AF993F7D915E03CB4E691B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		8159A8B274C16993003C357B65DF265D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
@@ -46,8 +47,9 @@
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		334DBD2B94AC5471CC0E871D23AF4BC4 /* Pods-YFZSwiftExtensions_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-YFZSwiftExtensions_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		454E68DBCEAB88499DD9DF34A4AC8B09 /* Pods-YFZSwiftExtensions_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-YFZSwiftExtensions_Example-frameworks.sh"; sourceTree = "<group>"; };
-		5422D96224A8BC8000DDA6E4 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
-		5B9AC79BBD0047C7B1210C7667D7547B /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = YFZSwiftExtensions/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
+		5422D96224A8BC8000DDA6E4 /* UILabel+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extensions.swift"; sourceTree = "<group>"; };
+		5422D96924A8C21D00DDA6E4 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		5422D96B24A8C25E00DDA6E4 /* Data+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extensions.swift"; sourceTree = "<group>"; };
 		5CD188B61F2443F07E7BB27C7279F696 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		6856148A20EDDF5A3CA59743C3AED9E4 /* Pods-YFZSwiftExtensions_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-YFZSwiftExtensions_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		69B2E5E787EFBBA70851604ED823411B /* Pods-YFZSwiftExtensions_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-YFZSwiftExtensions_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 		5422D96024A8BBB900DDA6E4 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				5422D96624A8C11D00DDA6E4 /* Foundation */,
 				5422D96124A8BC1F00DDA6E4 /* UIKit */,
 			);
 			path = Sources;
@@ -146,9 +149,18 @@
 		5422D96124A8BC1F00DDA6E4 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				5422D96224A8BC8000DDA6E4 /* UILabel.swift */,
+				5422D96224A8BC8000DDA6E4 /* UILabel+Extensions.swift */,
+				5422D96924A8C21D00DDA6E4 /* UIView+Extensions.swift */,
 			);
 			path = UIKit;
+			sourceTree = "<group>";
+		};
+		5422D96624A8C11D00DDA6E4 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				5422D96B24A8C25E00DDA6E4 /* Data+Extensions.swift */,
+			);
+			path = Foundation;
 			sourceTree = "<group>";
 		};
 		5836F9B03DBD777D78A703FE68493725 /* Products */ = {
@@ -165,7 +177,6 @@
 			isa = PBXGroup;
 			children = (
 				5422D96024A8BBB900DDA6E4 /* Sources */,
-				5B9AC79BBD0047C7B1210C7667D7547B /* ReplaceMe.swift */,
 				86936320CDDF1C387A6234F7E80C1A12 /* Pod */,
 				A72095D3B2CCB3085FF2467BE00C2EF0 /* Support Files */,
 			);
@@ -394,8 +405,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5422D96324A8BC8000DDA6E4 /* UILabel.swift in Sources */,
+				5422D96324A8BC8000DDA6E4 /* UILabel+Extensions.swift in Sources */,
+				5422D96C24A8C25E00DDA6E4 /* Data+Extensions.swift in Sources */,
 				E3AC2565D03F4C75CE368D728315BA79 /* Pods-YFZSwiftExtensions_Example-dummy.m in Sources */,
+				5422D96A24A8C21D00DDA6E4 /* UIView+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,7 +424,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71415B26E7FC9144D6275D90A51AFE7F /* ReplaceMe.swift in Sources */,
 				9BABF40CF8A651A3D575768CB71C3438 /* YFZSwiftExtensions-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
