@@ -1,0 +1,16 @@
+PODS:
+  - YFZSwiftExtensions (0.1.0)
+
+DEPENDENCIES:
+  - YFZSwiftExtensions (from `../`)
+
+EXTERNAL SOURCES:
+  YFZSwiftExtensions:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  YFZSwiftExtensions: 63c27ecc7e5e60f7d62f25755ba2b93de25a75d7
+
+PODFILE CHECKSUM: 2d5315ca767a119aa290a5c6f42cef40599e1701
+
+COCOAPODS: 1.9.3

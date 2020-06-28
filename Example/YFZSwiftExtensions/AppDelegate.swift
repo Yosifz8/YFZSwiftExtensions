@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  YFZSwiftExtensions
 //
-//  Created by Yosifz8 on 06/28/2020.
-//  Copyright (c) 2020 Yosifz8. All rights reserved.
+//  Created by Yosifz on 06/28/2020.
+//  Copyright (c) 2020 Yosifz. All rights reserved.
 //
 
 import UIKit

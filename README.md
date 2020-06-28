@@ -22,7 +22,7 @@ pod 'YFZSwiftExtensions'
 
 ## Author
 
-Yosifz8, yosifz8@gmail.com
+Yosifz, ‫yfzswiftextensions@gmail.com‬
 
 ## License
 
