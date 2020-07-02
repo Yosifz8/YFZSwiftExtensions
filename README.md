@@ -24,6 +24,10 @@ pod 'YFZSwiftExtensions'
 
 Yosifz, ‫yfzswiftextensions@gmail.com‬
 
+## Credit
+
+LBTATools - https://github.com/bhlvoong/LBTATools
+
 ## License
 
 YFZSwiftExtensions is available under the MIT license. See the LICENSE file for more info.
