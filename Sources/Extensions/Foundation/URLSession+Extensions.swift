@@ -7,7 +7,8 @@
 
 import Foundation
 
-extension URLSession {
+@available(iOS 11.0, tvOS 11.0, *)
+public extension URLSession {
     func makeHTTPReqest(url:URL, method:String = "GET", completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> () {
         var request = URLRequest(url: url)
         request.httpMethod = method

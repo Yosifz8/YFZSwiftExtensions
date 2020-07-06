@@ -7,8 +7,9 @@
 
 import UIKit
 
-extension UILabel {
-    convenience public init(text: String? = nil, font: UIFont? = UIFont.systemFont(ofSize: 14), textColor: UIColor = .black, textAlignment: NSTextAlignment = .left, numberOfLines: Int = 1) {
+@available(iOS 11.0, tvOS 11.0, *)
+public extension UILabel {
+    convenience init(text: String? = nil, font: UIFont? = UIFont.systemFont(ofSize: 14), textColor: UIColor = .black, textAlignment: NSTextAlignment = .left, numberOfLines: Int = 1) {
         self.init()
         self.text = text
         self.font = font
@@ -17,7 +18,7 @@ extension UILabel {
         self.numberOfLines = numberOfLines
     }
     
-    static public func label(text: String? = nil, font: UIFont? = UIFont.systemFont(ofSize: 14), textColor: UIColor = .black, textAlignment: NSTextAlignment = .left, numberOfLines: Int = 1) -> UILabel {
+    static func label(text: String? = nil, font: UIFont? = UIFont.systemFont(ofSize: 14), textColor: UIColor = .black, textAlignment: NSTextAlignment = .left, numberOfLines: Int = 1) -> UILabel {
         let label = UILabel()
         label.text = text
         label.font = font

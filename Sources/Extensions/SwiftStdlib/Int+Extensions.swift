@@ -7,7 +7,8 @@
 
 import Foundation
 
-extension Int {
+@available(iOS 11.0, tvOS 11.0, *)
+public extension Int {
     func multiply(by multiplier: Int) -> Int {
         return self * multiplier
     }

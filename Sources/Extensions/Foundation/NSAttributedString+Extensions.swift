@@ -7,7 +7,8 @@
 
 import Foundation
 
-extension NSAttributedString {
+@available(iOS 11.0, tvOS 11.0, *)
+public extension NSAttributedString {
     func highlighting(_ substring: String, using color: UIColor) -> NSAttributedString {
         let attributedString = NSMutableAttributedString(attributedString: self)
         attributedString.addAttribute(.foregroundColor, value: color, range: (self.string as NSString).range(of: substring))

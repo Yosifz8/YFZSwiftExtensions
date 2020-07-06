@@ -7,7 +7,8 @@
 
 import Foundation
 
-extension UISegmentedControl {
+@available(iOS 11.0, tvOS 11.0, *)
+public extension UISegmentedControl {
     var segmentTitles: [String] {
         get {
             let range = 0..<numberOfSegments

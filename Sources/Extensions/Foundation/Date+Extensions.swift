@@ -7,7 +7,8 @@
 
 import Foundation
 
-extension Date {
+@available(iOS 11.0, tvOS 11.0, *)
+public extension Date {
     init?(dateString:String, dateFormat:String) {
         let dateStringFormatter = DateFormatter()
         dateStringFormatter.dateFormat = dateFormat
@@ -23,14 +24,14 @@ extension Date {
         self.init(timeInterval:0, since:date)
     }
     
-    static public func date(dateString:String, dateFormat:String) -> Date? {
+    static func date(dateString:String, dateFormat:String) -> Date? {
         let dateStringFormatter = DateFormatter()
         dateStringFormatter.dateFormat = dateFormat
         let date = dateStringFormatter.date(from: dateString)!
         return self.init(timeInterval:0, since:date)
     }
     
-    static public func date(dateString:String, dateFormat:String, local:Locale) -> Date? {
+    static func date(dateString:String, dateFormat:String, local:Locale) -> Date? {
         let dateStringFormatter = DateFormatter()
         dateStringFormatter.dateFormat = dateFormat
         dateStringFormatter.locale = local
@@ -113,7 +114,7 @@ extension Date {
     }
     
     //
-    static public func localDate() -> Date {
+    static func localDate() -> Date {
         let timezone = TimeZone.current
         let seconds = TimeInterval(timezone.secondsFromGMT(for: Date()))
         return Date(timeInterval: seconds, since: Date())

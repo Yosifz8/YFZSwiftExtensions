@@ -7,8 +7,9 @@
 
 import Foundation
 
-extension UIImageView {
-    convenience public init(image: UIImage?, contentMode: UIView.ContentMode = .scaleAspectFill) {
+@available(iOS 11.0, tvOS 11.0, *)
+public extension UIImageView {
+    convenience init(image: UIImage?, contentMode: UIView.ContentMode = .scaleAspectFill) {
         self.init(image: image)
         self.contentMode = contentMode
         self.clipsToBounds = true
@@ -25,7 +26,7 @@ extension UIImageView {
         imageFromServerURL(url: url)
     }
     
-    func imageFromServerURL(url: URL) {        
+    func imageFromServerURL(url: URL) {
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             if error != nil {
                 print(error ?? "No Error")

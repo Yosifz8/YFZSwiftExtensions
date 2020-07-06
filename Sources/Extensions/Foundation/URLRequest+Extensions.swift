@@ -7,6 +7,7 @@
 
 import Foundation
 
+@available(iOS 11.0, tvOS 11.0, *)
 public struct ContentType: ExpressibleByStringLiteral {
     public static let json = ContentType("application/json")
     public static let text = ContentType("text/plain")
@@ -21,6 +22,7 @@ public struct ContentType: ExpressibleByStringLiteral {
     let value: String
 }
 
+@available(iOS 11.0, tvOS 11.0, *)
 public enum Method: String {
     case GET = "GET",
         POST = "POST",
@@ -29,7 +31,8 @@ public enum Method: String {
         PATCH = "PATCH"
 }
 
-extension URLRequest {
+@available(iOS 11.0, tvOS 11.0, *)
+public extension URLRequest {
     init(url: String) {
         self.init(url: URL(string: url)!)
     }

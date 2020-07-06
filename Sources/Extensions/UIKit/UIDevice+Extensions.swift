@@ -7,7 +7,8 @@
 
 import UIKit
 
-extension UIDevice {
+@available(iOS 11.0, tvOS 11.0, *)
+public extension UIDevice {
     var modelName: String {
         var systemInfo = utsname()
         uname(&systemInfo)

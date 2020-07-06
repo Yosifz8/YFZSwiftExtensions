@@ -7,8 +7,9 @@
 
 import UIKit
 
-extension UIView {
-    convenience public init(backgroundColor: UIColor = .clear) {
+@available(iOS 11.0, tvOS 11.0, *)
+public extension UIView {
+    convenience init(backgroundColor: UIColor = .clear) {
         self.init(frame: .zero)
         self.backgroundColor = backgroundColor
     }
@@ -258,7 +259,7 @@ extension UIView {
         layer.shadowColor = color.cgColor
     }
     
-    func removeAllConstraints() {
+    open func removeAllConstraints() {
         var _superview = self.superview
 
         while let superview = _superview {
@@ -281,7 +282,8 @@ extension UIView {
     }
 }
 
-extension UIView {
+@available(iOS 11.0, tvOS 11.0, *)
+public extension UIView {
     var origin: CGPoint {
         get {
             return self.frame.origin

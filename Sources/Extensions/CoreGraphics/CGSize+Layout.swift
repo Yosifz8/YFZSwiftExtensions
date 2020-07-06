@@ -7,8 +7,9 @@
 
 import Foundation
 
-extension CGSize {
-    static public func equalEdge(_ edge: CGFloat) -> CGSize {
+@available(iOS 11.0, tvOS 11.0, *)
+public extension CGSize {
+    static func equalEdge(_ edge: CGFloat) -> CGSize {
         return .init(width: edge, height: edge)
     }
 }

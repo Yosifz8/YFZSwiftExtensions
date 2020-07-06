@@ -7,7 +7,8 @@
 
 import Foundation
 
-extension Array {
+@available(iOS 11.0, tvOS 11.0, *)
+public extension Array {
     mutating func removeAllAndAdd(array:Array) {
         self.removeAll()
         self.append(contentsOf: array)

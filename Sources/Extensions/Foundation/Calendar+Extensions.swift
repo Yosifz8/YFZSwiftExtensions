@@ -7,7 +7,8 @@
 
 import Foundation
 
-extension Calendar {
+@available(iOS 11.0, tvOS 11.0, *)
+public extension Calendar {
     func dayOfWeek(_ date: Date) -> Int {
         var dayOfWeek = self.component(.weekday, from: date) + 1 - self.firstWeekday
 

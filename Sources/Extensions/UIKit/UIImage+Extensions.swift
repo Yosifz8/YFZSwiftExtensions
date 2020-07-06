@@ -7,7 +7,8 @@
 
 import Foundation
 
-extension UIImage {
+@available(iOS 11.0, tvOS 11.0, *)
+public extension UIImage {
     convenience init?(base64String: String, scale: CGFloat = 1.0) {
         guard let data = Data(base64Encoded: base64String) else { return nil }
         self.init(data: data, scale: scale)

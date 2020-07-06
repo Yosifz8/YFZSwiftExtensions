@@ -7,8 +7,9 @@
 
 import Foundation
 
-extension UIEdgeInsets {
-    static public func allSides(_ side: CGFloat) -> UIEdgeInsets {
+@available(iOS 11.0, tvOS 11.0, *)
+public extension UIEdgeInsets {
+    static func allSides(_ side: CGFloat) -> UIEdgeInsets {
         return .init(top: side, left: side, bottom: side, right: side)
     }
 }

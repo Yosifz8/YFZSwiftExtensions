@@ -7,7 +7,8 @@
 
 import Foundation
 
-extension String {
+@available(iOS 11.0, tvOS 11.0, *)
+public extension String {
     //convert string to json object or array
     
     init?(base64: String) {

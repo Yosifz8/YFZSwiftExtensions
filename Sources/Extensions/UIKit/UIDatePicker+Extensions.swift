@@ -7,7 +7,8 @@
 
 import Foundation
 
-extension UIDatePicker {
+@available(iOS 11.0, tvOS 11.0, *)
+public extension UIDatePicker {
     
     convenience init(frame:CGRect, datePickerMode:UIDatePicker.Mode = .dateAndTime, date:Date, minimumDate:Date, maximumDate:Date, timeZone:TimeZone? = nil) {
         self.init(frame:frame)
@@ -19,11 +20,11 @@ extension UIDatePicker {
         self.maximumDate = maximumDate
     }
     
-    static public func createDatePicker(frame:CGRect, date:Date, minimumDate:Date, maximumDate:Date, timeZone:TimeZone? = nil) -> UIDatePicker {
+    static func createDatePicker(frame:CGRect, date:Date, minimumDate:Date, maximumDate:Date, timeZone:TimeZone? = nil) -> UIDatePicker {
         return UIDatePicker(frame:frame, date:date, minimumDate:minimumDate, maximumDate:maximumDate)
     }
     
-    static public func createCountDown(frame:CGRect, countDownDuration:TimeInterval, minuteInterval:Int) -> UIDatePicker {
+    static func createCountDown(frame:CGRect, countDownDuration:TimeInterval, minuteInterval:Int) -> UIDatePicker {
         let picker = UIDatePicker(frame:frame)
         picker.datePickerMode = .countDownTimer
         picker.countDownDuration = countDownDuration

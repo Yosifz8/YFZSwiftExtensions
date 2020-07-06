@@ -7,8 +7,9 @@
 
 import UIKit
 
-extension UITableView {
-    convenience public init(frame:CGRect = .zero, style:UITableView.Style, dataSource:UITableViewDataSource? = nil, delegate:UITableViewDelegate? = nil) {
+@available(iOS 11.0, tvOS 11.0, *)
+public extension UITableView {
+    convenience init(frame:CGRect = .zero, style:UITableView.Style, dataSource:UITableViewDataSource? = nil, delegate:UITableViewDelegate? = nil) {
         self.init(frame:frame, style:style)
         
         self.dataSource = dataSource

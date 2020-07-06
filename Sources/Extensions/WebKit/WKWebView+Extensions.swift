@@ -7,7 +7,8 @@
 
 import WebKit
 
-extension WKWebView {
+@available(iOS 11.0, tvOS 11.0, *)
+public extension WKWebView {
     
     convenience init(frame:CGRect = .zero, uiDelegate:WKUIDelegate? = nil, navigationDelegate:WKNavigationDelegate? = nil, customUserAgent:String? = nil) {
         let webConfiguration = WKWebViewConfiguration()

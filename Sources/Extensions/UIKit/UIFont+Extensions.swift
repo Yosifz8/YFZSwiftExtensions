@@ -7,10 +7,12 @@
 
 import Foundation
 
-extension UIFont {
+@available(iOS 11.0, tvOS 11.0, *)
+public extension UIFont {
     static func regularFont(_ size : CGFloat) -> UIFont {
         return UIFont(name: "HelveticaNeue", size: size)!
     }
+    
     static func boldFont(_ size : CGFloat) -> UIFont {
         return UIFont(name:"HelveticaNeue-Bold", size: size)!
     }

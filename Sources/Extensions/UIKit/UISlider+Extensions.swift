@@ -7,8 +7,9 @@
 
 import Foundation
 
-extension UISlider {
-    convenience public init(frame:CGRect, value:Float = 0.0, minimumValue:Float = 0.0, maximumValue:Float = 1.0, isContinuous:Bool = true) {
+@available(iOS 11.0, tvOS 11.0, *)
+public extension UISlider {
+    convenience init(frame:CGRect, value:Float = 0.0, minimumValue:Float = 0.0, maximumValue:Float = 1.0, isContinuous:Bool = true) {
         self.init(frame: frame)
         self.minimumValue = minimumValue
         self.maximumValue = minimumValue

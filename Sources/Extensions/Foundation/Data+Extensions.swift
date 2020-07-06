@@ -7,7 +7,8 @@
 
 import Foundation
 
-extension Data {
+@available(iOS 11.0, tvOS 11.0, *)
+public extension Data {
     func printString() {
         guard let dataAsString = self.toString() else {
             print("ERROR: Could not convert data to string")

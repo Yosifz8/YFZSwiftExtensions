@@ -7,16 +7,17 @@
 
 import UIKit
 
-extension UIColor {
-    static public func rgb(red: CGFloat, green: CGFloat, blue: CGFloat) -> UIColor {
+@available(iOS 11.0, tvOS 11.0, *)
+public extension UIColor {
+    static func rgb(red: CGFloat, green: CGFloat, blue: CGFloat) -> UIColor {
         return UIColor(red: red/255, green: green/255, blue: blue/255, alpha: 1.0)
     }
     
-    static public func rgb(red: CGFloat, green: CGFloat, blue: CGFloat, alpha:CGFloat = 1.0) -> UIColor {
+    static func rgb(red: CGFloat, green: CGFloat, blue: CGFloat, alpha:CGFloat = 1.0) -> UIColor {
         return UIColor(red: red/255, green: green/255, blue: blue/255, alpha: alpha)
     }
     
-    static public func hex(hex: Int, alpha: CGFloat = 1.0) -> UIColor {
+    static func hex(hex: Int, alpha: CGFloat = 1.0) -> UIColor {
         let red = CGFloat((hex & 0xFF0000) >> 16) / 255.0
         let green = CGFloat((hex & 0x00FF00) >> 8) / 255.0
         let blue = CGFloat(hex & 0x0000FF) / 255.0

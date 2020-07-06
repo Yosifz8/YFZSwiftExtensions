@@ -7,7 +7,8 @@
 
 import Foundation
 
-extension UISearchBar {
+@available(iOS 11.0, tvOS 11.0, *)
+public extension UISearchBar {
     var textField : UITextField? {
         if #available(iOS 13.0, *) {
             return self.searchTextField
